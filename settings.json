@@ -29,6 +29,22 @@
         },
         {
             "before": [
+                "<S-h>"
+            ],
+            "commands": [
+                "workbench.action.moveEditorLeftInGroup"
+            ]
+        },
+        {
+            "before": [
+                "<S-l>"
+            ],
+            "commands": [
+                "workbench.action.moveEditorRightInGroup"
+            ]
+        },
+        {
+            "before": [
                 "<leader>",
                 "w"
             ],
@@ -188,6 +204,15 @@
         {
             "before": [
                 "<leader>",
+                "w"
+            ],
+            "commands": [
+                ":w!"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
                 "c",
                 "c"
             ],
@@ -256,9 +281,8 @@
         }
     ],
     "vim.handleKeys": {
-        // Avoid Vim overriding VSCode default keybindings like find or select all in Windows
+        // Avoid Vim overriding VSCode default keybindings like find in Windows
         // These two keybindings below shouldn't matter in Mac
-        "<C-a>": false,
         "<C-f>": false
     },
 }
