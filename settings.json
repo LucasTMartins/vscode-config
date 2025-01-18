@@ -1,288 +1,181 @@
 {
-    "workbench.colorTheme": "Catppuccin Frappé",
-    "workbench.iconTheme": "catppuccin-frappe",
-    "redhat.telemetry.enabled": true,
-    "window.menuBarVisibility": "toggle",
-    "editor.minimap.enabled": false,
-    "editor.lineNumbers": "relative",
-    "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?",
-    "vim.useSystemClipboard": true,
-    "vim.leader": "<Space>",
-    "vim.normalModeKeyBindingsNonRecursive": [
-        // NAVIGATION
-        // switch b/w buffers
-        {
-            "before": [
-                "<S-j>"
-            ],
-            "commands": [
-                ":bprevious"
-            ]
-        },
-        {
-            "before": [
-                "<S-k>"
-            ],
-            "commands": [
-                ":bnext"
-            ]
-        },
-        {
-            "before": [
-                "<S-h>"
-            ],
-            "commands": [
-                "workbench.action.moveEditorLeftInGroup"
-            ]
-        },
-        {
-            "before": [
-                "<S-l>"
-            ],
-            "commands": [
-                "workbench.action.moveEditorRightInGroup"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "w"
-            ],
-            "commands": [
-                ":w!"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "q"
-            ],
-            "commands": [
-                ":q"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "b",
-                "q"
-            ],
-            "commands": [
-                "workbench.action.closeUnmodifiedEditors"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "b",
-                "o"
-            ],
-            "commands": [
-                "workbench.action.closeOtherEditors"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "c",
-                "d"
-            ],
-            "commands": [
-                "editor.action.quickFix"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "c",
-                "c"
-            ],
-            "commands": [
-                "editor.action.commentLine"
-            ]
-        },
-        {
-            "before": [
-                "leader",
-                "f"
-            ],
-            "commands": [
-                "editor.action.formatDocument"
-            ]
-        },
-        {
-            "before": [
-                "leader",
-                "t"
-            ],
-            "commands": [
-                "workbench.action.showAllSymbols"
-            ]
-        },
-        {
-            "before": [
-                "leader",
-                "k"
-            ],
-            "commands": [
-                ":!code ~/.config/Code/User/settings.json"
-            ]
-        },
-        {
-            "before": [
-                "leader",
-                "v"
-            ],
-            "commands": [
-                ":vsplit"
-            ]
-        },
-        {
-            "before": [
-                "leader",
-                "s"
-            ],
-            "commands": [
-                ":split"
-            ]
-        },
-        {
-            // To scroll down and center the cursor to the middle of screen
-            "before": [
-                "<C-d>"
-            ],
-            "after": [
-                "<C-d>",
-                "z",
-                "z"
-            ]
-        },
-        {
-            // To scroll p and center the cursor to the middle of screen
-            "before": [
-                "<C-u>"
-            ],
-            "after": [
-                "<C-u>",
-                "z",
-                "z"
-            ]
-        },
-        {
-            // In normal mode, same like in visual mode, but can use with MOTION (w, b, ...)
-            "before": [
-                "leader",
-                "d"
-            ],
-            "after": [
-                "\"",
-                "_",
-                "d"
-            ]
-        },
-    ],
-    "vim.normalModeKeyBindings": [
-        {
-            "before": [
-                "<leader>",
-                "e"
-            ],
-            "commands": [
-                "workbench.view.explorer"
-            ]
-        },
-    ],
-    "vim.visualModeKeyBindings": [
-        {
-            "before": [
-                "C-d"
-            ],
-            "commands": [
-                "editor.action.addSelectionToNextFindMatch"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "w"
-            ],
-            "commands": [
-                ":w!"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "c",
-                "c"
-            ],
-            "commands": [
-                "editor.action.commentLine"
-            ]
-        },
-        // Stay in visual mode while indenting
-        {
-            "before": [
-                "<"
-            ],
-            "commands": [
-                "editor.action.outdentLines"
-            ]
-        },
-        {
-            "before": [
-                ">"
-            ],
-            "commands": [
-                "editor.action.indentLines"
-            ]
-        },
-        // Move selected lines while staying in visual mode
-        {
-            "before": [
-                "J"
-            ],
-            "commands": [
-                "editor.action.moveLinesDownAction"
-            ]
-        },
-        {
-            "before": [
-                "K"
-            ],
-            "commands": [
-                "editor.action.moveLinesUpAction"
-            ]
-        },
-        {
-            // In visual mode, delete WITHOUT putting content into clipboard register
-            "before": [
-                "<leader>",
-                "d"
-            ],
-            "after": [
-                "\"",
-                "_",
-                "d"
-            ]
-        },
-        {
-            // In visual mode, paste over WITHOUT putting content under cursor into clipboard register
-            "before": [
-                "<leader>",
-                "p"
-            ],
-            "after": [
-                "p",
-                "g",
-                "v",
-                "y"
-            ]
-        }
-    ],
-    "vim.handleKeys": {
-        // Avoid Vim overriding VSCode default keybindings like find in Windows
-        // These two keybindings below shouldn't matter in Mac
-        "<C-f>": false
+  //---------- CONFIGURAÇÕES GLOBAIS
+  "window.menuBarVisibility": "toggle", // Barra de Menu escondida
+  "window.newWindowDimensions": "maximized", // Abrindo sempre com a janela maximizada
+  // Atalhos do vim no modo normal
+  "vim.normalModeKeyBindingsNonRecursive": [
+    //----- NAVEGAÇÃO
+    // Alterar de aba/buffer anterior
+    {
+      "before": ["<S-j>"],
+      "commands": [":bprevious"]
     },
+    // Alterar de aba/buffer seguinte
+    {
+      "before": ["<S-k>"],
+      "commands": [":bnext"]
+    },
+    // Rolar tela para baixo com o cursor no centro da tela
+    {
+      "before": ["<C-d>"],
+      "after": ["<C-d>", "z", "z"]
+    },
+    // Rolar tela para cima com o cursor no centro da tela
+    {
+      "before": ["<C-u>"],
+      "after": ["<C-u>", "z", "z"]
+    },
+    // Mover aba/buffer para o lado esquerdo
+    {
+      "before": ["<S-h>"],
+      "commands": ["workbench.action.moveEditorLeftInGroup"]
+    },
+    // Mover aba/buffer para o lado direito
+    {
+      "before": ["<S-l>"],
+      "commands": ["workbench.action.moveEditorRightInGroup"]
+    },
+    // Fechar aba/buffer atual
+    {
+      "before": ["<leader>", "q"],
+      "commands": [":q"]
+    },
+    // Fechar todas abas/buffers abertos
+    {
+      "before": ["<leader>", "b", "q"],
+      "commands": ["workbench.action.closeUnmodifiedEditors"]
+    },
+    // Fechar demais abas/buffers, mantendo atual aberta
+    {
+      "before": ["<leader>", "b", "o"],
+      "commands": ["workbench.action.closeOtherEditors"]
+    },
+    // Abrir explorador de arquivos e alterar o foco para ele
+    {
+      "before": ["<leader>", "e"],
+      "commands": ["workbench.view.explorer"]
+    },
+    //----- EDIÇÃO
+    // Salvar arquivo atual
+    {
+      "before": ["<leader>", "w"],
+      "commands": [":w!"]
+    },
+    // Mostrar sugestar de correção para erros detectados
+    {
+      "before": ["<leader>", "c", "d"],
+      "commands": ["editor.action.quickFix"]
+    },
+    // Comentar linha atual
+    {
+      "before": ["<leader>", "c", "c"],
+      "commands": ["editor.action.commentLine"]
+    },
+    // Formatar o documento/arquivo
+    {
+      "before": ["leader", "f"],
+      "commands": ["editor.action.formatDocument"]
+    },
+    // Apagar texto sem copiar para o clipboard do sistema
+    {
+      "before": ["leader", "d"],
+      "after": ["\"", "_", "d"]
+    },
+    //----- FERRAMENTAS
+    // Pesquisar por Variáveis, Constantes, Funções, Classes, Métodos ou outro item estruturado
+    {
+      "before": ["leader", "t"],
+      "commands": ["workbench.action.showAllSymbols"]
+    },
+    // Dividir a tela verticalmente
+    {
+      "before": ["leader", "v"],
+      "commands": [":vsplit"]
+    },
+    // Dividir a tela horizontalmente
+    {
+      "before": ["leader", "s"],
+      "commands": [":split"]
+    },
+    // Abrir arquivo de configuração global do VSCode (AVISO: esse atalho está configurado somente para o Linux)
+    {
+      "before": ["leader", "k"],
+      "commands": [":!code ~/.config/Code/User/settings.json"]
+    }
+  ],
+  // Atalhos do vim no modo visual
+  "vim.visualModeKeyBindings": [
+    //----- EDIÇÃO
+    // Salvar arquivo atual
+    {
+      "before": ["<leader>", "w"],
+      "commands": [":w!"]
+    },
+    // Comentar linha atual
+    {
+      "before": ["<leader>", "c", "c"],
+      "commands": ["editor.action.commentLine"]
+    },
+    // Diminuir indentação do texto selecionado
+    {
+      "before": ["<"],
+      "commands": ["editor.action.outdentLines"]
+    },
+    // Aumentar indentação do texto selecionado
+    {
+      "before": [">"],
+      "commands": ["editor.action.indentLines"]
+    },
+    // Mover as linhas selecionadas para baixo
+    {
+      "before": ["J"],
+      "commands": ["editor.action.moveLinesDownAction"]
+    },
+    // Mover as linhas selecionadas para cima
+    {
+      "before": ["K"],
+      "commands": ["editor.action.moveLinesUpAction"]
+    },
+    // Apagar texto sem copiar para o clipboard do sistema
+    {
+      "before": ["<leader>", "d"],
+      "after": ["\"", "_", "d"]
+    },
+    // Colar texto no lugar do texto selecionado sem copiar para o clipboard do sistema
+    {
+      "before": ["<leader>", "p"],
+      "after": ["p", "g", "v", "y"]
+    },
+    //----- FERRAMENTAS
+    // Selecionar próximo texto igual ao selecionado com multi-cursor
+    {
+      "before": ["C-d"],
+      "commands": ["editor.action.addSelectionToNextFindMatch"]
+    }
+  ],
+  //---------- CONFIGURAÇÕES DE PERFIL
+  // AVISO: Manter na configuração global também pois assim vale para o perfil padrão!
+  //----- ESTILO
+  "editor.fontSize": 15, // Alterar tamanho da fonte
+  "breadcrumbs.enabled": false, // Remover caminho absoluto presente no topo do editor
+  "editor.minimap.enabled": false, // Remover mini-mapa
+  "editor.lineNumbers": "relative", // Alterar númeração de linhas para relativa
+  "terminal.integrated.fontSize": 15, // Alterar tamanho da fonte no terminal
+  "chat.commandCenter.enabled": false, // Remover chat copilot do centro superior
+  "workbench.sideBar.location": "right", // Mover barra lateral para direita
+  "workbench.layoutControl.enabled": false, // Remover controle de layout do canto superior direito
+  "workbench.activityBar.location": "hidden", // Esconder barra de atividade
+  "workbench.iconTheme": "catppuccin-frappe", // Alterar tema de ícones
+  "workbench.colorTheme": "Catppuccin Frappé", // Alterar tema de cores
+  //----- FERRAMENTAS
+  "vim.leader": "<Space>", // Definir tecla LEADER para o Vim
+  "vim.useSystemClipboard": true, // Definir o clipboard do sistema para o Vim
+  "workbench.startupEditor": "none", // Iniciar o VSCode em uma página vazia
+  "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?", // Definir separadores de palavra para o Vim
+  // Evitar que o vim sobrescreva os atalhos padrões do VSCode
+  "vim.handleKeys": {
+    "<C-f>": false, // Pesquisar
+    "<C-p>": false, // Pesquisar arquivos no workspace
+    "<C-a>": false, // Selecionar todo o texto (não conta como modo visual do Vim)
+  }
 }
