@@ -55,6 +55,16 @@
       "before": ["<leader>", "e"],
       "commands": ["workbench.view.explorer"]
     },
+    // Mover para palavra específica baseado em comando de 2 letras
+    {
+      "before": ["f"],
+      "commands": ["jumpy2.toggle"]
+    },
+    // Selecionar texto até palavra específica baseado em comando de 2 letras
+    {
+      "before": ["F"],
+      "commands": ["jumpy2.toggleSelection"]
+    },
     //----- EDIÇÃO
     // Salvar arquivo atual
     {
@@ -163,19 +173,21 @@
   "terminal.integrated.fontSize": 15, // Alterar tamanho da fonte no terminal
   "chat.commandCenter.enabled": false, // Remover chat copilot do centro superior
   "workbench.sideBar.location": "right", // Mover barra lateral para direita
-  "workbench.layoutControl.enabled": false, // Remover controle de layout do canto superior direito
-  "workbench.activityBar.location": "hidden", // Esconder barra de atividade
+  "workbench.layoutControl.enabled": false, // Esconder barra de atividade
   "workbench.iconTheme": "catppuccin-frappe", // Alterar tema de ícones
   "workbench.colorTheme": "Catppuccin Frappé", // Alterar tema de cores
   //----- FERRAMENTAS
   "vim.leader": "<Space>", // Definir tecla LEADER para o Vim
   "vim.useSystemClipboard": true, // Definir o clipboard do sistema para o Vim
   "workbench.startupEditor": "none", // Iniciar o VSCode em uma página vazia
+  "jumpy2.customKeys": "fhdjskalgrueiwoncbv", // Definir letras usadas pela extensão jumpy2 para mover para uma palavra específica
   "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?", // Definir separadores de palavra para o Vim
   // Evitar que o vim sobrescreva os atalhos padrões do VSCode
   "vim.handleKeys": {
     "<C-f>": false, // Pesquisar
     "<C-p>": false, // Pesquisar arquivos no workspace
     "<C-a>": false, // Selecionar todo o texto (não conta como modo visual do Vim)
+    "<C-k>": false, // Permitir atalhos mais avançados
+    "<C-w>": false // Fechar aba/buffer atual
   }
 }
