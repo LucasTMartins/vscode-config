@@ -7,53 +7,121 @@
     //----- NAVEGAÇÃO
     // Alterar de aba/buffer anterior
     {
-      "before": ["<S-j>"],
-      "commands": [":bprevious"]
+      "before": [
+        "<S-j>"
+      ],
+      "commands": [
+        ":bprevious"
+      ]
     },
     // Alterar de aba/buffer seguinte
     {
-      "before": ["<S-k>"],
-      "commands": [":bnext"]
+      "before": [
+        "<S-k>"
+      ],
+      "commands": [
+        ":bnext"
+      ]
     },
     // Rolar tela para baixo com o cursor no centro da tela
     {
-      "before": ["<C-d>"],
-      "after": ["<C-d>", "z", "z"]
+      "before": [
+        "<C-d>"
+      ],
+      "after": [
+        "<C-d>",
+        "z",
+        "z"
+      ]
     },
     // Rolar tela para cima com o cursor no centro da tela
     {
-      "before": ["<C-u>"],
-      "after": ["<C-u>", "z", "z"]
+      "before": [
+        "<C-u>"
+      ],
+      "after": [
+        "<C-u>",
+        "z",
+        "z"
+      ]
     },
     // Mover aba/buffer para o lado esquerdo
     {
-      "before": ["<S-h>"],
-      "commands": ["workbench.action.moveEditorLeftInGroup"]
+      "before": [
+        "<S-h>"
+      ],
+      "commands": [
+        "workbench.action.moveEditorLeftInGroup"
+      ]
     },
     // Mover aba/buffer para o lado direito
     {
-      "before": ["<S-l>"],
-      "commands": ["workbench.action.moveEditorRightInGroup"]
+      "before": [
+        "<S-l>"
+      ],
+      "commands": [
+        "workbench.action.moveEditorRightInGroup"
+      ]
     },
     // Fechar aba/buffer atual
     {
-      "before": ["<leader>", "q"],
-      "commands": [":q"]
+      "before": [
+        "<leader>",
+        "q"
+      ],
+      "commands": [
+        ":q"
+      ]
     },
     // Fechar todas abas/buffers abertos
     {
-      "before": ["<leader>", "b", "q"],
-      "commands": ["workbench.action.closeUnmodifiedEditors"]
+      "before": [
+        "<leader>",
+        "b",
+        "q"
+      ],
+      "commands": [
+        "workbench.action.closeUnmodifiedEditors"
+      ]
     },
     // Fechar demais abas/buffers, mantendo atual aberta
     {
-      "before": ["<leader>", "b", "o"],
-      "commands": ["workbench.action.closeOtherEditors"]
+      "before": [
+        "<leader>",
+        "b",
+        "o"
+      ],
+      "commands": [
+        "workbench.action.closeOtherEditors"
+      ]
     },
     // Abrir explorador de arquivos e alterar o foco para ele
     {
-      "before": ["<leader>", "e"],
-      "commands": ["workbench.view.explorer"]
+      "before": [
+        "<leader>",
+        "e"
+      ],
+      "commands": [
+        "workbench.view.explorer"
+      ]
+    },
+    // Mover para palavra específica baseado em comando de 2 letras
+    {
+      "before": [
+        "f"
+      ],
+      "commands": [
+        "jumpy2.toggle"
+      ]
+    },
+    // Selecionar texto até palavra específica baseado em comando de 2 letras
+    {
+      "before": [
+        "F"
+      ],
+      "commands": [
+        "jumpy2.toggleSelection"
+      ]
     },
     // Mover para palavra específica baseado em comando de 2 letras
     {
@@ -68,49 +136,98 @@
     //----- EDIÇÃO
     // Salvar arquivo atual
     {
-      "before": ["<leader>", "w"],
-      "commands": [":w!"]
+      "before": [
+        "<leader>",
+        "w"
+      ],
+      "commands": [
+        ":w!"
+      ]
     },
     // Mostrar sugestar de correção para erros detectados
     {
-      "before": ["<leader>", "c", "d"],
-      "commands": ["editor.action.quickFix"]
+      "before": [
+        "<leader>",
+        "c",
+        "d"
+      ],
+      "commands": [
+        "editor.action.quickFix"
+      ]
     },
     // Comentar linha atual
     {
-      "before": ["<leader>", "c", "c"],
-      "commands": ["editor.action.commentLine"]
+      "before": [
+        "<leader>",
+        "c",
+        "c"
+      ],
+      "commands": [
+        "editor.action.commentLine"
+      ]
     },
     // Formatar o documento/arquivo
     {
-      "before": ["leader", "f"],
-      "commands": ["editor.action.formatDocument"]
+      "before": [
+        "leader",
+        "f"
+      ],
+      "commands": [
+        "editor.action.formatDocument"
+      ]
     },
     // Apagar texto sem copiar para o clipboard do sistema
     {
-      "before": ["leader", "d"],
-      "after": ["\"", "_", "d"]
+      "before": [
+        "leader",
+        "d"
+      ],
+      "after": [
+        "\"",
+        "_",
+        "d"
+      ]
     },
     //----- FERRAMENTAS
     // Pesquisar por Variáveis, Constantes, Funções, Classes, Métodos ou outro item estruturado
     {
-      "before": ["leader", "t"],
-      "commands": ["workbench.action.showAllSymbols"]
+      "before": [
+        "leader",
+        "t"
+      ],
+      "commands": [
+        "workbench.action.showAllSymbols"
+      ]
     },
     // Dividir a tela verticalmente
     {
-      "before": ["leader", "v"],
-      "commands": [":vsplit"]
+      "before": [
+        "leader",
+        "v"
+      ],
+      "commands": [
+        ":vsplit"
+      ]
     },
     // Dividir a tela horizontalmente
     {
-      "before": ["leader", "s"],
-      "commands": [":split"]
+      "before": [
+        "leader",
+        "s"
+      ],
+      "commands": [
+        ":split"
+      ]
     },
     // Abrir arquivo de configuração global do VSCode (AVISO: esse atalho está configurado somente para o Linux)
     {
-      "before": ["leader", "k"],
-      "commands": [":!code ~/.config/Code/User/settings.json"]
+      "before": [
+        "leader",
+        "k"
+      ],
+      "commands": [
+        ":!code ~/.config/Code/User/settings.json"
+      ]
     }
   ],
   // Atalhos do vim no modo visual
@@ -118,49 +235,95 @@
     //----- EDIÇÃO
     // Salvar arquivo atual
     {
-      "before": ["<leader>", "w"],
-      "commands": [":w!"]
+      "before": [
+        "<leader>",
+        "w"
+      ],
+      "commands": [
+        ":w!"
+      ]
     },
     // Comentar linha atual
     {
-      "before": ["<leader>", "c", "c"],
-      "commands": ["editor.action.commentLine"]
+      "before": [
+        "<leader>",
+        "c",
+        "c"
+      ],
+      "commands": [
+        "editor.action.commentLine"
+      ]
     },
     // Diminuir indentação do texto selecionado
     {
-      "before": ["<"],
-      "commands": ["editor.action.outdentLines"]
+      "before": [
+        "<"
+      ],
+      "commands": [
+        "editor.action.outdentLines"
+      ]
     },
     // Aumentar indentação do texto selecionado
     {
-      "before": [">"],
-      "commands": ["editor.action.indentLines"]
+      "before": [
+        ">"
+      ],
+      "commands": [
+        "editor.action.indentLines"
+      ]
     },
     // Mover as linhas selecionadas para baixo
     {
-      "before": ["J"],
-      "commands": ["editor.action.moveLinesDownAction"]
+      "before": [
+        "J"
+      ],
+      "commands": [
+        "editor.action.moveLinesDownAction"
+      ]
     },
     // Mover as linhas selecionadas para cima
     {
-      "before": ["K"],
-      "commands": ["editor.action.moveLinesUpAction"]
+      "before": [
+        "K"
+      ],
+      "commands": [
+        "editor.action.moveLinesUpAction"
+      ]
     },
     // Apagar texto sem copiar para o clipboard do sistema
     {
-      "before": ["<leader>", "d"],
-      "after": ["\"", "_", "d"]
+      "before": [
+        "<leader>",
+        "d"
+      ],
+      "after": [
+        "\"",
+        "_",
+        "d"
+      ]
     },
     // Colar texto no lugar do texto selecionado sem copiar para o clipboard do sistema
     {
-      "before": ["<leader>", "p"],
-      "after": ["p", "g", "v", "y"]
+      "before": [
+        "<leader>",
+        "p"
+      ],
+      "after": [
+        "p",
+        "g",
+        "v",
+        "y"
+      ]
     },
     //----- FERRAMENTAS
     // Selecionar próximo texto igual ao selecionado com multi-cursor
     {
-      "before": ["C-d"],
-      "commands": ["editor.action.addSelectionToNextFindMatch"]
+      "before": [
+        "C-d"
+      ],
+      "commands": [
+        "editor.action.addSelectionToNextFindMatch"
+      ]
     }
   ],
   //---------- CONFIGURAÇÕES DE PERFIL
@@ -173,7 +336,7 @@
   "terminal.integrated.fontSize": 15, // Alterar tamanho da fonte no terminal
   "chat.commandCenter.enabled": false, // Remover chat copilot do centro superior
   "workbench.sideBar.location": "right", // Mover barra lateral para direita
-  "workbench.layoutControl.enabled": false, // Esconder barra de atividade
+  "workbench.layoutControl.enabled": false, // Remover controle de layout do canto superior direito
   "workbench.iconTheme": "catppuccin-frappe", // Alterar tema de ícones
   "workbench.colorTheme": "Catppuccin Frappé", // Alterar tema de cores
   //----- FERRAMENTAS
