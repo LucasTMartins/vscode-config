@@ -13,6 +13,12 @@
     "command": "editor.action.commentLine",
     "when": "editorTextFocus && !editorReadonly"
   },
+  // Comentar linha atual (WINDOWS)
+  {
+    "key": "alt+oem_2",
+    "command": "editor.action.commentLine",
+    "when": "editorTextFocus && !editorReadonly"
+  },
   //---------- NAVEGAÇÃO E VISIBILIDADE
   // Alterar foco para o explorador de arquivos
   {
