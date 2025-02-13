@@ -66,6 +66,11 @@
       "before": ["F"],
       "commands": ["jumpy2.toggleSelection"]
     },
+    // Navegar por editores abertos
+    {
+      "before": ["<leader>", "tab"],
+      "commands": ["workbench.action.showAllEditors"]
+    },
     // Ir para definição
     {
       "before": ["<leader>", "g", "d"],
