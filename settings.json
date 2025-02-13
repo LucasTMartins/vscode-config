@@ -209,6 +209,7 @@
     "<C-p>": false, // Pesquisar arquivos no workspace
     "<C-a>": false, // Selecionar todo o texto (não conta como modo visual do Vim)
     "<C-k>": false, // Permitir atalhos mais avançados
-    "<C-w>": false // Fechar aba/buffer atual
+    "<C-w>": false, // Fechar aba/buffer atual
+    "<C-n>": false // Criar novo arquivo
   }
 }
