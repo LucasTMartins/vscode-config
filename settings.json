@@ -98,10 +98,15 @@
       "after": ["\"", "_", "d"]
     },
     //----- FERRAMENTAS
-    // Pesquisar por Variáveis, Constantes, Funções, Classes, Métodos ou outro item estruturado
+    // Pesquisar por Variáveis, Constantes, Funções, Classes, Métodos ou outro item estruturado (no workspace)
     {
       "before": ["leader", "t"],
       "commands": ["workbench.action.showAllSymbols"]
+    },
+    // Pesquisar por Variáveis, Constantes, Funções, Classes, Métodos ou outro item estruturado (no editor em foco)
+    {
+      "before": ["leader", "o"],
+      "commands": ["workbench.action.gotoSymbol"]
     },
     // Dividir a tela verticalmente
     {
