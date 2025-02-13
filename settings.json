@@ -108,6 +108,11 @@
       "before": ["leader", "o"],
       "commands": ["workbench.action.gotoSymbol"]
     },
+    // Abrir Command Palette
+    {
+      "before": ["leader", "p"],
+      "commands": ["workbench.action.showCommands"]
+    },
     // Dividir a tela verticalmente
     {
       "before": ["leader", "v"],
