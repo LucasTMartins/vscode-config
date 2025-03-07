@@ -132,6 +132,11 @@
     {
       "before": ["leader", "k"],
       "commands": [":!code ~/.config/Code/User/settings.json"]
+    },
+    // Selecionar todo o texto
+    {
+      "before": ["leader", "a"],
+      "after": ["g", "g", "<S-v>", "<S-g>"]
     }
   ],
   // Atalhos do vim no modo visual
